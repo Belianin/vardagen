@@ -1,0 +1,115 @@
+
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+footer {
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    align-content: center;
+    height: 64px;
+    width: 100%;
+}
+
+.footer-content {
+    margin-left: 32px;
+    margin-top: 32px;
+}
+
+.menu {
+    position: absolute;
+    list-style: none;
+    width: 100%;
+    margin: 0 0 0 0;
+    height: 64px;
+    top: 0;
+    left: 0;
+    padding: 0 0 0 0;
+    align-content: center;
+}
+
+.menu li {
+    display: inline-block;
+    margin-left: 32px;
+    margin-top: 16px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black
+}
+
+.title {
+    display: inline;
+    font-size: 64px;
+}
+
+.logo-container {
+    height: 256px;
+    width: 100%;
+    display: block;
+}
+
+.logo {
+    display: block;
+    float: left;
+    margin-left: 32px;
+    margin-top: 32px;
+    text-align: right;
+}
+
+.gallery-container {
+    height: 512px;
+    width: 100%;
+    align-content: center;
+}
+
+.gallery {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 512px;
+}
+
+.gallery img {
+    object-fit: cover;
+    width: auto;
+    height: 512px;
+    max-height: 512px;
+}
+
+.spacer {
+    height: 128px;
+    background-color: red;
+}
+
+@media only screen and (max-width: 600px) {
+    .logo-container {
+        height: 256px;
+        width: 100%;
+        display: block;
+    }
+
+    .logo {
+        display: block;
+        float: left;
+        margin-left: 32px;
+        margin-top: 32px;
+        text-align: right;
+        width: 100%;
+    }
+
+    .title {
+        font-size: 10em;
+        display: inline;
+    }
+
+    .menu li {
+        font-size: 24px;
+        display: inline-block;
+        margin-left: 32px;
+        margin-top: 16px;
+    }
+}
