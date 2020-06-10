@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import Carousel from "react-material-ui-carousel";
 
 import './modules.d.ts';
 // @ts-ignore
 import PreloadImage from "react-preload-image";
+import {CircularProgress} from "@material-ui/core";
 
 const imageLinks = [
     "https://www.instagram.com/p/CBLf4uzjGX5/media?size=l",
@@ -22,7 +23,8 @@ interface IAppProps {
 }
 
 interface IAppState {
-    images: HTMLImageElement[]
+    images: JSX.Element[],
+    isLoadingImages: boolean;
 }
 
 class App extends React.Component<IAppProps, IAppState> {
@@ -30,8 +32,25 @@ class App extends React.Component<IAppProps, IAppState> {
         super(props);
 
         this.state = {
-            images: []
+            images: [],
+            isLoadingImages: true,
         }
+    }
+
+    componentDidMount(): void {
+        this.setState({
+            images: imageLinks.map(i => (<PreloadImage className={"gallery-img"} src={i} duration={"0ms"}/>)),
+            isLoadingImages: false
+        });
+    }
+
+    renderGallery(){
+        if (this.state.isLoadingImages)
+            return <CircularProgress />;
+
+        return <Carousel autoPlay={true} indicators={false} navButtonsAlwaysVisible={true} interval={4000} animation={"fade"} className={"gallery"} fullHeightHover={false} timeout={200}>
+            {this.state.images}
+        </Carousel>
     }
 
     render () {
@@ -52,9 +71,7 @@ class App extends React.Component<IAppProps, IAppState> {
               </div>
             </div>
             <div className={"gallery-container"}>
-              <Carousel autoPlay={true} indicators={false} navButtonsAlwaysVisible={true} interval={4000} animation={"fade"} className={"gallery"} fullHeightHover={false} timeout={200}>
-                {imageLinks.map(i => (<PreloadImage className={"gallery-img"} src={i} />))}
-            </Carousel>
+                {this.renderGallery()}
           </div>
           </main>
           <footer>
