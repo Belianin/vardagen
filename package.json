@@ -2,7 +2,7 @@
   "name": "vardagen.ru",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://vardagen.ru/",
+  "homepage": "https://vardagen.ru",
   "dependencies": {
     "@material-ui/core": "^4.10.1",
     "@testing-library/jest-dom": "^4.2.4",
@@ -16,6 +16,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-material-ui-carousel": "^1.5.1",
+    "react-preload-image": "^1.0.7",
     "react-scripts": "3.4.1",
     "typescript": "~3.7.2"
   },

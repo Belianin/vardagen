@@ -9157,6 +9157,11 @@ react-material-ui-carousel@^1.5.1:
     node-sass "^4.14.0"
     react-scripts "^3.4.0"
 
+react-preload-image@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/react-preload-image/-/react-preload-image-1.0.7.tgz#4fc4afccc72b11465df2898ab4aae7832f233bab"
+  integrity sha512-lIREXvawPJsykq2aFSk4XRP2/mvsnEX5FpZUExXW7eeHhXCLuUARus/DjfxfbaLfIwXDjZ/tQsmq5JDemSgaeA==
+
 react-scripts@3.4.1, react-scripts@^3.4.0:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/react-scripts/-/react-scripts-3.4.1.tgz#f551298b5c71985cc491b9acf3c8e8c0ae3ada0a"
